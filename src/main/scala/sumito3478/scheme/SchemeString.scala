@@ -24,9 +24,7 @@ object SchemeString{
     new SchemeString(s)
   }
 
-  implicit def toString(s : SchemeString) = {
-    throw new NotImplementedError()
-  }
+  implicit def toString(s : SchemeString) = s.toString()
 }
 
 
