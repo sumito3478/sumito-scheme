@@ -57,7 +57,7 @@ class SchemeStringSpec extends Specification{
     }
 
     "return String equals to the return value of String#toString()" in new context {
-      SchemeString.toString(s) mustEqual(s.toString())
+      SchemeString.convertToString(s) mustEqual(s.toString())
     }
   }
 
