@@ -17,6 +17,7 @@ class SchemeStringSpec extends Specification{
       s1 mustEqual s3
     }
   }
+
   "SchemeString#new(RichString)" should {
     trait context extends Scope{
       val orig : SchemeString = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
