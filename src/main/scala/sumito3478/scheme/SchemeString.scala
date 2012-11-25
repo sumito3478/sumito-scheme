@@ -10,6 +10,9 @@ object SchemeString{
     throw new NotImplementedError()
   }
 
+  implicit def toString(s : SchemeString) = {
+    throw new NotImplementedError()
+  }
 }
 
 
