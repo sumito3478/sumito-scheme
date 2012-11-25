@@ -3,6 +3,11 @@ package sumito3478.scheme
 import scala.collection.mutable.ArrayBuffer
 
 class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffer[SchemeChar]) {
+  override def equals(that : Any) : Boolean = that match {
+    case s : SchemeString => buffer == s.buffer
+    case _ => false
+  }
+
   def toCharArray = buffer.toArray
 
   override def toString() : String = {
