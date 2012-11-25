@@ -21,7 +21,7 @@ class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffe
 
 object SchemeString{
   implicit def fromString(s : String) : SchemeString = {
-    throw new NotImplementedError()
+    new SchemeString(s)
   }
 
   implicit def toString(s : SchemeString) = {
