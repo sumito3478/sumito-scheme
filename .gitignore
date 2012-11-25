@@ -6,3 +6,7 @@
 # my sbt-dir
 /sbt-dir
 
+# eclipse
+.project
+.classpath
+
