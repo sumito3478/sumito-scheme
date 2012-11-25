@@ -1,8 +1,11 @@
 package sumito3478.scheme
 
 import scala.collection.mutable.ArrayBuffer
+import RichString._
 
 class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffer[SchemeChar]) {
+  def this(s : RichString) = this(s.toSchemeCharArrayBuffer)
+
   override def equals(that : Any) : Boolean = that match {
     case s : SchemeString => buffer == s.buffer
     case _ => false
