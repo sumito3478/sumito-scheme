@@ -20,7 +20,7 @@ class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffe
 }
 
 object SchemeString{
-  implicit def fromString(s : String) : SchemeString = {
+  implicit def convertFromString(s : String) : SchemeString = {
     new SchemeString(s)
   }
 

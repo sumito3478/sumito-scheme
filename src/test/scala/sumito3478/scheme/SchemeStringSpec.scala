@@ -47,7 +47,7 @@ class SchemeStringSpec extends Specification{
     }
 
     "return SchemeString equals to the return value of new SchemeString(String)" in new context {
-      SchemeString.fromString(s) mustEqual(new SchemeString(s))
+      SchemeString.convertFromString(s) mustEqual(new SchemeString(s))
     }
   }
 
