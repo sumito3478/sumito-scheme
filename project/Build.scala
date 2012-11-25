@@ -13,7 +13,8 @@ object SumitoSchemeBuild extends Build {
       version := "0.0.1", 
       scalaVersion := "2.10.0-RC2", 
       libraryDependencies ++= Seq(
-        "org.specs2" %% "specs2" % "1.12.3" % "test"
+        "org.specs2" %% "specs2" % "1.12.3" % "test", 
+        "org.mockito" % "mockito-core" % "1.9.5" % "test"
       )
     ): _*
   )
