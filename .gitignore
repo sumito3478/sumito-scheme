@@ -3,3 +3,6 @@
 /project/target
 /project/project
 
+# my sbt-dir
+/sbt-dir
+
