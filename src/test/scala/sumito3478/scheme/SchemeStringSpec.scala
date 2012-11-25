@@ -25,6 +25,16 @@ class SchemeStringSpec extends Specification{
     }
   }
 
+  "SchemeString.fromString" should {
+    trait context extends Scope{
+      val s : String = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
+    }
+
+    "return SchemeString equals to the return value of new SchemeString(String)" in new context {
+      SchemeString.fromString(s) mustEqual(new SchemeString(s))
+    }
+  }
+
   "SchemeString#equals" should {
     trait context extends Scope {
       val s : SchemeString = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
