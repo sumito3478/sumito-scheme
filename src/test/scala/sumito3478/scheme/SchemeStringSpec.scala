@@ -3,6 +3,17 @@ package sumito3478.scheme
 import org.specs2.mutable.Specification
 
 class SchemeStringSpec extends Specification{
+  "SchemeString#new(RichString)" should {
+    trait context extends Scope{
+      val orig : SchemeString = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
+      val s : String = orig
+    }
+
+    "create SchemeString equal to the original" in new context{
+      new SchemeString(s) mustEqual orig
+    }
+  }
+
   "SchemeString#toString" should {
     trait context extends Scope{
       val orig : String = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
