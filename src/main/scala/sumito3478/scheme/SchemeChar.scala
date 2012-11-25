@@ -4,3 +4,5 @@ class SchemeChar(val value : Int) extends AnyVal{
 
 }
 
+object SchemeChar {
+}
