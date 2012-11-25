@@ -1,6 +1,7 @@
 package sumito3478.scheme
 
 import org.specs2.mutable.Specification
+import org.specs2.specification.Scope
 
 class SchemeStringSpec extends Specification{
   "SchemeString" should {
