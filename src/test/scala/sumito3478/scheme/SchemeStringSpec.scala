@@ -77,6 +77,24 @@ class SchemeStringSpec extends Specification{
     }
   }
 
+  "SchemeString#==" should {
+    // because Object#equals cannot be stubbed, describe the behavior of == itself.
+    trait context extends Scope {
+      val s : SchemeString = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
+      val same : SchemeString = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
+      val different : SchemeString =
+        "Unicode Character 'DECIDUOUS TREE' (U+1F333) : '\ud83c\udf33' (UTF-16: 0xd83c 0xdf33)"
+    }
+
+    "return true if String is same" in new context {
+      s == same must beTrue
+    }
+
+    "reutrn false if String is different" in new context {
+      s == different must beFalse
+    }
+  }
+
   "SchemeString#toCharArray" should {
     trait context extends Scope {
       val buffer = Array[SchemeChar](0x1f334, 0x1f333)
