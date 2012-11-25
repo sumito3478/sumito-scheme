@@ -11,7 +11,10 @@ object SumitoSchemeBuild extends Build {
   ).settings(
     Seq(
       version := "0.0.1", 
-      scalaVersion := "2.10.0-RC2"
+      scalaVersion := "2.10.0-RC2", 
+      libraryDependencies ++= Seq(
+        "org.specs2" %% "specs2" % "latest.integration" % "test"
+      )
     ): _*
   )
 
