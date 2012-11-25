@@ -4,6 +4,11 @@ import scala.collection.mutable.ArrayBuffer
 
 class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffer[SchemeChar]) {
   def toCharArray = buffer.toArray
+
+  override def toString() : String = {
+    val charArray = toCharArray
+    new String(charArray.map(_.value), 0, charArray.length)
+  }
 }
 
 object SchemeString{
