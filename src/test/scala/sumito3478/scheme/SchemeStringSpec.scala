@@ -3,6 +3,20 @@ package sumito3478.scheme
 import org.specs2.mutable.Specification
 
 class SchemeStringSpec extends Specification{
+  "SchemeString" should {
+    "implicitly comverted from String" in {
+      val s1 = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
+      val s2 : SchemeString = s1
+      s2.toString() mustEqual s1
+    }
+
+    "implicitly converted to String" in {
+      val s1 = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
+      val s2 = new SchemeString(s1)
+      val s3 : String = s2
+      s1 mustEqual s3
+    }
+  }
   "SchemeString#new(RichString)" should {
     trait context extends Scope{
       val orig : SchemeString = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
