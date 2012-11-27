@@ -101,7 +101,7 @@ class SchemeStringSpec extends Specification{
 
   "SchemeString#toCharArray" should {
     trait context extends Scope {
-      val buffer = Array[SchemeChar](0x1f334, 0x1f333)
+      val buffer = Array[Int](0x1f334, 0x1f333)
       val s : SchemeString = "\ud83c\udf34\ud83c\udf33" // same as above buffer
     }
 

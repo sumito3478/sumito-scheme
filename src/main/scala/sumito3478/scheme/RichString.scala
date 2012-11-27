@@ -3,9 +3,9 @@ package sumito3478.scheme
 import collection.mutable.ArrayBuffer
 
 class RichString(val value : String) {
-  def toSchemeCharArrayBuffer : ArrayBuffer[SchemeChar] = {
+  def toSchemeCharArrayBuffer : ArrayBuffer[Int] = {
     val count = value.codePointCount(0, value.length)
-    val buffer = new ArrayBuffer[SchemeChar](count)
+    val buffer = new ArrayBuffer[Int](count)
     var cpIndex = 0
     var charIndex = 0
     while(cpIndex < count) {
