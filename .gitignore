@@ -9,6 +9,7 @@
 # eclipse
 .project
 .classpath
+.cache
 
 # idea
 .idea
