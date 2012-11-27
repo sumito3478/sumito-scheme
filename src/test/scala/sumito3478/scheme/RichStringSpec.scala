@@ -1,14 +1,11 @@
 package sumito3478.scheme
 
-import org.specs2.mutable.Specification
+import org.specs2.mutable.SpecificationWithJUnit
 import org.specs2.specification.Scope
 import collection.mutable.ArrayBuffer
 import RichString._
-import org.junit.runner.RunWith
-import org.specs2.runner.JUnitRunner
 
-@RunWith(classOf[JUnitRunner])
-class RichStringSpec extends Specification{
+class RichStringSpec extends SpecificationWithJUnit{
   "RichString#toSchemeCharArrayBuffer" should {
     trait context extends Scope {
       val buffer = new ArrayBuffer[Int]()

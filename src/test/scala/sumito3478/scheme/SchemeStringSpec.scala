@@ -1,12 +1,9 @@
 package sumito3478.scheme
 
-import org.specs2.mutable.Specification
+import org.specs2.mutable.SpecificationWithJUnit
 import org.specs2.specification.Scope
-import org.junit.runner.RunWith
-import org.specs2.runner.JUnitRunner
 
-@RunWith(classOf[JUnitRunner])
-class SchemeStringSpec extends Specification{
+class SchemeStringSpec extends SpecificationWithJUnit{
   "SchemeString" should {
     "implicitly comverted from String" in {
       val s1 = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
