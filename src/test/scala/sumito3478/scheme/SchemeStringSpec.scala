@@ -2,7 +2,10 @@ package sumito3478.scheme
 
 import org.specs2.mutable.Specification
 import org.specs2.specification.Scope
+import org.junit.runner.RunWith
+import org.specs2.runner.JUnitRunner
 
+@RunWith(classOf[JUnitRunner])
 class SchemeStringSpec extends Specification{
   "SchemeString" should {
     "implicitly comverted from String" in {

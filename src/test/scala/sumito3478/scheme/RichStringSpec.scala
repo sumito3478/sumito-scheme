@@ -4,7 +4,10 @@ import org.specs2.mutable.Specification
 import org.specs2.specification.Scope
 import collection.mutable.ArrayBuffer
 import RichString._
+import org.junit.runner.RunWith
+import org.specs2.runner.JUnitRunner
 
+@RunWith(classOf[JUnitRunner])
 class RichStringSpec extends Specification{
   "RichString#toSchemeCharArrayBuffer" should {
     trait context extends Scope {
