@@ -3,7 +3,8 @@ package sumito3478.scheme
 import scala.collection.mutable.ArrayBuffer
 import RichString._
 
-class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffer[SchemeChar]) {
+class SchemeString(
+    private val buffer : ArrayBuffer[Int] = new ArrayBuffer[Int]) {
   def this(s : RichString) = this(s.toSchemeCharArrayBuffer)
 
   override def equals(that : Any) : Boolean = that match {
@@ -15,7 +16,7 @@ class SchemeString(private val buffer : ArrayBuffer[SchemeChar] = new ArrayBuffe
 
   override def toString() : String = {
     val charArray = toCharArray
-    new String(charArray.map(_.value), 0, charArray.length)
+    new String(charArray, 0, charArray.length)
   }
 }
 
@@ -25,6 +26,7 @@ object SchemeString{
   }
 
   implicit def convertToString(s : SchemeString) = s.toString()
+  
 }
 
 

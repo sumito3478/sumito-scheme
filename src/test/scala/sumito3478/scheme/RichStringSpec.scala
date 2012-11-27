@@ -11,7 +11,7 @@ import org.specs2.runner.JUnitRunner
 class RichStringSpec extends Specification{
   "RichString#toSchemeCharArrayBuffer" should {
     trait context extends Scope {
-      val buffer = new ArrayBuffer[SchemeChar]()
+      val buffer = new ArrayBuffer[Int]()
       buffer += 0x1f334
       buffer += 0x1f333
       val s = new String(Array[Int](0x1f334, 0x1f333), 0, 2)
