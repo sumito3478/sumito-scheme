@@ -87,6 +87,9 @@ object SchemeString{
   def apply(xs: String) : SchemeString = fromChar(new WrappedString(xs))
   
   def apply(xs: Int*) : SchemeString = apply(xs)
+  
+  def make(k : Int, char : Int = 0) : SchemeString =
+    apply(Array.fill(k){char})
 }
 
 
