@@ -29,7 +29,7 @@ class SchemeStringSpec extends SpecificationWithJUnit{
 
   "SchemeString#new(RichString)" should {
     "create SchemeString equal to the original" in {
-      new SchemeString(palmString) mustEqual palm
+      SchemeString(palmString) mustEqual palm
     }
   }
 
