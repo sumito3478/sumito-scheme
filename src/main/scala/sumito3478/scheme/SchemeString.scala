@@ -65,6 +65,7 @@ object SchemeString{
 
   implicit def convertToString(s : SchemeString) = s.toString()
   
+  def apply(xs: RichString) : SchemeString = apply(xs.toSchemeCharArrayBuffer)
   
   
   def apply(xs: Int*) : SchemeString = apply(xs)
