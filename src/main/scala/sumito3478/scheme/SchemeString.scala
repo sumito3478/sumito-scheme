@@ -27,6 +27,11 @@ object SchemeString{
 
   implicit def convertToString(s : SchemeString) = s.toString()
   
+  def apply(chars : Int*) = 
+    new SchemeString(new ArrayBuffer[Int] ++ chars)
+  
+  def apply(string : SchemeString) =
+    new SchemeString(new ArrayBuffer[Int] ++ string.buffer)
 }
 
 
