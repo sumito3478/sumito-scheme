@@ -29,6 +29,13 @@ class SchemeString {
         Character.toLowerCase(c)
     }
   }
+  
+  def toUpperCase : SchemeString = {
+    new SchemeString ++= buffer.map {
+      c =>
+        Character.toUpperCase(c)
+    }
+  }
 }
 
 object SchemeString{
