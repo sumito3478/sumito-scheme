@@ -17,6 +17,11 @@ class SchemeString {
     val charArray = toCharArray
     new String(charArray, 0, charArray.length)
   }
+  
+  def ++=(xs: TraversableOnce[Int]) : SchemeString = {
+    buffer ++= xs
+    this
+  }
 }
 
 object SchemeString{
