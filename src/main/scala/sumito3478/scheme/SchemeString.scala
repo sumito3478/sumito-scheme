@@ -91,6 +91,9 @@ object SchemeString{
   
   def make(k : Int, char : Int = 0) : SchemeString =
     apply(Array.fill(k){char})
+  
+  def string(chars : Int*) : SchemeString =
+    apply(chars)
 }
 
 
