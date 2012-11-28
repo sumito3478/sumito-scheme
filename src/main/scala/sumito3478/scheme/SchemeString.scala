@@ -47,6 +47,9 @@ class SchemeString {
   def update(idx: Int, elem: Int) = buffer(idx) = elem
   
   def =? (string2 : SchemeString) = buffer == string2.buffer
+  
+  def `ci=?` (string2 : SchemeString) = 
+    toLowerCase.buffer == string2.toLowerCase.buffer
 }
 
 object SchemeString{
