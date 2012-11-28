@@ -50,6 +50,11 @@ class SchemeString {
   
   def `ci=?` (string2 : SchemeString) = 
     toLowerCase.buffer == string2.toLowerCase.buffer
+  
+  def `<?` (string2 : SchemeString) =
+    throw new NotImplementedError
+  
+  def `>?` (string2 : SchemeString) = throw new NotImplementedError
 }
 
 object SchemeString{
