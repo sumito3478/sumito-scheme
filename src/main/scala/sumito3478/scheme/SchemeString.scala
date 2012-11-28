@@ -84,6 +84,8 @@ object SchemeString{
     new SchemeString ++= buffer
   }
   
+  def apply(xs: String) : SchemeString = fromChar(new WrappedString(xs))
+  
   def apply(xs: Int*) : SchemeString = apply(xs)
 }
 
