@@ -70,6 +70,20 @@ object SchemeString{
   def apply(xs: TraversableOnce[Int]) : SchemeString =
     new SchemeString ++= xs
   
+  def fromChar(xs: TraversableOnce[Char]) : SchemeString = {
+    val source = xs.toIterator.buffered
+    val buffer = new ArrayBuffer[Int]
+    while(source.hasNext) {
+      val char = source.next
+      buffer += (
+          if(source.hasNext && Character.isSurrogatePair(char, source.head))
+            Character.toCodePoint(char, source.next)
+          else
+            char)
+    }
+    new SchemeString ++= buffer
+  }
+  
   def apply(xs: Int*) : SchemeString = apply(xs)
 }
 
