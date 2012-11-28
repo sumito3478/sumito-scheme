@@ -2,6 +2,7 @@ package sumito3478.scheme
 
 import scala.collection.mutable.ArrayBuffer
 import RichString._
+import scala.collection.immutable.WrappedString
 
 class SchemeString {
   val buffer = new ArrayBuffer[Int]
