@@ -39,6 +39,9 @@ class SchemeString {
   
   // string-length
   def length = buffer.length
+  
+  // string-ref
+  def apply(idx: Int) = buffer(idx)
 }
 
 object SchemeString{
