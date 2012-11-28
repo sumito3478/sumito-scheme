@@ -4,6 +4,17 @@ import org.specs2.mutable.SpecificationWithJUnit
 import org.specs2.specification.Scope
 
 class SchemeStringSpec extends SpecificationWithJUnit{
+  val palmString = "PALM TREE: '\ud83c\udf34'"
+  val palmArray = Array[Int](
+      0x50, 0x41, 0x4c, 0x4d, 0x20, 0x54, 0x52, 0x45, 0x45, 0x3a, 
+          0x20, 0x27, 0x1f334, 0x27)
+  val palm = SchemeString(palmArray : _*) // equals to palmString
+  val palm2 = SchemeString(palm)
+  val deciduousString : SchemeString = "DECIDUOUS TREE: '\ud83c\udf33'"
+  val deciduous = SchemeString(
+      0x44, 0x45, 0x43, 0x49, 0x44, 0x55, 0x4f, 0x55, 0x53, 0x20, 
+          0x54, 0x52, 0x45, 0x45, 0x3a, 0x20, 0x27, 0x1f333, 0x27)
+          // equals to deciduousString
   "SchemeString" should {
     "implicitly comverted from String" in {
       val s1 = "Unicode Character 'PALM TREE' (U+1F334) : '\ud83c\udf34' (UTF-16: 0xd83c 0xdf34)"
