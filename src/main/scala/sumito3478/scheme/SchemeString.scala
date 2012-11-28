@@ -3,9 +3,8 @@ package sumito3478.scheme
 import scala.collection.mutable.ArrayBuffer
 import RichString._
 
-class SchemeString(
-    private val buffer : ArrayBuffer[Int] = new ArrayBuffer[Int]) {
-  def this(s : RichString) = this(s.toSchemeCharArrayBuffer)
+class SchemeString {
+  val buffer = new ArrayBuffer[Int]
 
   override def equals(that : Any) : Boolean = that match {
     case s : SchemeString => buffer == s.buffer
