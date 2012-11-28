@@ -55,6 +55,9 @@ class SchemeString {
     throw new NotImplementedError
   
   def `>?` (string2 : SchemeString) = throw new NotImplementedError
+  
+  def substring(start : Int, end : Int) =
+    SchemeString(buffer.view(start, end))
 }
 
 object SchemeString{
