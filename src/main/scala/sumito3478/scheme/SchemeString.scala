@@ -22,6 +22,13 @@ class SchemeString {
     buffer ++= xs
     this
   }
+  
+  def toLowerCase : SchemeString = {
+    new SchemeString ++= buffer.map {
+      c =>
+        Character.toLowerCase(c)
+    }
+  }
 }
 
 object SchemeString{
