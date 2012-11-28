@@ -36,6 +36,9 @@ class SchemeString {
         Character.toUpperCase(c)
     }
   }
+  
+  // string-length
+  def length = buffer.length
 }
 
 object SchemeString{
