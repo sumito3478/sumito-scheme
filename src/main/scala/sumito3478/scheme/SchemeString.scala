@@ -45,6 +45,8 @@ class SchemeString {
   
   // string-set!
   def update(idx: Int, elem: Int) = buffer(idx) = elem
+  
+  def =? (string2 : SchemeString) = buffer == string2.buffer
 }
 
 object SchemeString{
