@@ -5,7 +5,7 @@ import org.specs2.specification.Scope
 import collection.mutable.ArrayBuffer
 import RichString._
 
-class RichStringSpec extends SpecificationWithJUnit{
+class RichStringSpec extends SpecificationWithJUnit {
   "RichString#toSchemeCharArrayBuffer" should {
     trait context extends Scope {
       val buffer = new ArrayBuffer[Int]()
