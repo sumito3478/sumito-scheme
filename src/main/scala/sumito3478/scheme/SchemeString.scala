@@ -61,9 +61,7 @@ class SchemeString {
 }
 
 object SchemeString{
-  implicit def convertFromString(s : String) : SchemeString = {
-    new SchemeString(s)
-  }
+  implicit def convertFromString(s : String) : SchemeString = apply(s)
 
   implicit def convertToString(s : SchemeString) = s.toString()
   
