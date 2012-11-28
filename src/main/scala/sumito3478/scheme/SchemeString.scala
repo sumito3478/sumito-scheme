@@ -67,6 +67,8 @@ object SchemeString{
   
   def apply(xs: RichString) : SchemeString = apply(xs.toSchemeCharArrayBuffer)
   
+  def apply(xs: TraversableOnce[Int]) : SchemeString =
+    new SchemeString ++= xs
   
   def apply(xs: Int*) : SchemeString = apply(xs)
 }
